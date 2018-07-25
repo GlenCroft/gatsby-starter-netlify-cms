@@ -1,0 +1,43 @@
+@import '~normalize-scss/sass/normalize';
+@include normalize();
+
+.wrapper {
+  background-color: #e8e8e8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  background-color: #fff;
+}
+
+.row {
+  display: flex;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+.col {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.card {
+  border: 1px solid #e8e8e8;
+  max-width: 18rem;
+  max-height: 30rem;
+}
+.card-image {
+  width: 18rem;
+  height: 18rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-body {
+  padding: 1.5rem;
+}

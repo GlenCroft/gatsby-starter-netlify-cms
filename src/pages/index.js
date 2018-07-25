@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { edges: dogs } = data.allMarkdownRemark
 
     return (
       <section className="section">
@@ -13,30 +13,31 @@ export default class IndexPage extends React.Component {
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
           </div>
-          {posts
-            .map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
+          <div className="row">
+
+            {dogs
+              .map(({ node: dog }) => (
+                <div className="col">
+                  <div className="card" key={dog.id}>
+                    <div className="card-image" style={{backgroundImage: `url('${dog.frontmatter.image}')`}}></div>
+                    <div className="card-body">
+                      <Link className="has-text-primary" to={dog.fields.slug}>
+                        {dog.frontmatter.title}
+                      </Link>
+                      <span> &bull; </span>
+                      <small>{dog.frontmatter.date}</small>
+
+                      <p>
+                        <Link className="button is-small" to={dog.fields.slug}>
+                          Keep Reading →
+                        </Link>
+                      </p>
+                    </div>
+                  </div>
+                </div>
             ))}
+
+          </div>
         </div>
       </section>
     )
@@ -68,6 +69,7 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            image
           }
         }
       }
