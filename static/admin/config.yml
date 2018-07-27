@@ -15,7 +15,7 @@ collections:
       - {label: "Name", name: "title", widget: "string"}
       - {label: "Gender", name: "gender", widget: "select",
           options:
-            - {label: "Male", value: "male"}
+            - {label: "Male", value: "male"},
             - {label: "Female", value: "female"}
         }
       - {label: "Date of Birth", name: "dob", widget: "string"}
