@@ -56,7 +56,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "dog-page" } }}
+      filter: { fileAbsolutePath: {regex : "\/dogs/"} },
     ) {
       edges {
         node {
@@ -67,7 +67,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            templateKey
             date(formatString: "MMMM DD, YYYY")
             image
           }
