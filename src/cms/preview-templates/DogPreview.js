@@ -4,7 +4,6 @@ import { DogTemplate } from '../../templates/dog-page'
 
 const DogPagePreview = ({ entry, widgetFor }) => (
   <DogTemplate
-    content={widgetFor('body')}
     description={entry.getIn(['data', 'description'])}
     title={entry.getIn(['data', 'title'])}
   />
