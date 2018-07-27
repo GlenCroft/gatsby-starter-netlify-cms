@@ -18,5 +18,6 @@ collections:
             - {label: "Male", value: "male"}
             - {label: "Female", value: "female"}
         }
-      - {label: "Date of Birth", name: "dob", widget: "date"}
+      - {label: "Date of Birth", name: "dob", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}

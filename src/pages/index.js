@@ -21,15 +21,12 @@ export default class IndexPage extends React.Component {
                   <div className="card" key={dog.id}>
                     <div className="card-image" style={{backgroundImage: `url('${dog.frontmatter.image}')`}}></div>
                     <div className="card-body">
-                      <Link className="has-text-primary" to={dog.fields.slug}>
-                        {dog.frontmatter.title}
-                      </Link>
-                      <span> &bull; </span>
-                      <small>{dog.frontmatter.date}</small>
-
+                      {dog.frontmatter.title}
+                      {dog.frontmatter.dob}
+                      {dog.description}
                       <p>
-                        <Link className="button is-small" to={dog.fields.slug}>
-                          Keep Reading →
+                        <Link className="button is-small">
+                          YouTube
                         </Link>
                       </p>
                     </div>
@@ -67,7 +64,9 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            gender
+            dob
+            description
             image
           }
         }
