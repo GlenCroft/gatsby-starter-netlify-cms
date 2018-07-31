@@ -2,7 +2,7 @@
 @include normalize();
 
 .wrapper {
-  background-color: #e8e8e8;
+  // background-color: #e8e8e8;
 }
 
 .container {
@@ -20,6 +20,7 @@
   display: flex;
   margin-left: -0.75rem;
   margin-right: -0.75rem;
+  flex-wrap: wrap;
 }
 .col {
   margin-left: 0.75rem;

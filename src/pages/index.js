@@ -11,7 +11,7 @@ export default class IndexPage extends React.Component {
       <section className="section">
         <div className="container">
           <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+            <h1 className="has-text-weight-bold is-size-2">Our Dogs</h1>
           </div>
           <div className="row">
 
@@ -22,7 +22,11 @@ export default class IndexPage extends React.Component {
                     <div className="card-image" style={{backgroundImage: `url('${dog.frontmatter.image}')`}}></div>
                     <div className="card-body">
                       {dog.frontmatter.title}
-                      {dog.frontmatter.dob}
+                      <br/>
+                      Breed: {dog.frontmatter.breed}
+                      <br/>
+                      DOB: {dog.frontmatter.dob}
+                      <br/>
                       {dog.description}
                       <p>
                         <Link className="button is-small">
@@ -66,6 +70,7 @@ export const pageQuery = graphql`
             title
             gender
             dob
+            breed
             description
             image
           }
