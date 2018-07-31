@@ -12,11 +12,24 @@ collections:
     create: true
     slug: "{{slug}}-{{year}}{{month}}{{day}}-{{hour}}{{minute}}{{second}}"
     fields:
-      - {label: "Name", name: "title", widget: "string"}
-      - {label: "Gender", name: "gender", widget: "select",
-          options:
-            - {label: "Male", value: "male"}
-            - {label: "Female", value: "female"}
-        }
-      - {label: "Date of Birth", name: "dob", widget: "date"}
-      - {label: "Description", name: "description", widget: "text"}
+      - label: "Name"
+        name: "title"
+        widget: "string"
+      - label: "Gender"
+        name: "gender"
+        widget: "select"
+        options:
+          - {label: "Male", value: "male"}
+          - {label: "Female", value: "female"}
+      - label: "Date of Birth"
+        name: "dob"
+        widget: "string"
+      - label: "Breed"
+        name: "breed"
+        widget: "string"
+      - label: "Description"
+        name: "description"
+        widget: "text"
+      - label: "Image"
+        name: "image"
+        widget: "image"
