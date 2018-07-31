@@ -12,6 +12,9 @@ const Navbar = () => (
             <img src={logo} alt="Dun-Roamin" style={{ width: '88px' }} />
           </figure>
         </Link>
+        <Link to="/admin/" className="navbar-item">
+          Admin
+        </Link>
       </div>
       {/* <div className="navbar-start">
         <Link className="navbar-item" to="/about">

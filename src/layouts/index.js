@@ -7,7 +7,7 @@ import './all.scss'
 
 const TemplateWrapper = ({ children }) => (
   <div className="wrapper">
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Helmet title="Dun-Roamin'" />
     <Navbar />
     <div className="main">{children()}</div>
   </div>
